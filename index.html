@@ -1,17 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BYHOTEL</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-
-    <!-- css interno -->
+    <!-- CSS Interno -->
     <style>
+        .big-round {
+            border-radius: 40px !important;
+        }
 
+        .legenda-fotos {
+            padding: 16px;
+            margin-top: -60px;
+            position: relative;
+            z-index: 2;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
+        .bg-verde {
+            background-color: #85ce91;
+        }
     </style>
 </head>
 
@@ -19,36 +33,212 @@
 
     <div class="container">
         <!-- Barra de navegação -->
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">BYHOTEL</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID"
-                    aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarID">
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav nav-pills">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link " aria-current="page" href="#">Rooms</a>
-                        <a class="nav-link " aria-current="page" href="#">Services</a>
-                        <a class="nav-link " aria-current="page" href="#">Activities</a>
-                        <a class="nav-link active" aria-current="page" href="#">Book Now</a>
-
-
+                        <a class="nav-link" href="#">Rooms</a>
+                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="#">Activities</a>
+                        <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Book Now</a>
                     </div>
                 </div>
             </div>
         </nav>
+
+        <!-- Banner rotatório carossel -->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/pexels-boonkong-boonpeng-442952-1134176.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/pexels-enginakyurt-1579253.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/pexels-pixabay-261102.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+        <div class="row mt-5 mb-5">
+            <div class="col-md text-light">
+                <h2>About the Hotel</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, id itaque dolorem inventore
+                    architecto rem sit harum praesentium. Obcaecati ipsa hic maxime dolorum eligendi necessitatibus
+                    fuga, voluptate veritatis possimus vero?
+                </p>
+            </div>
+            <div class="col-md">
+                <img src="img/pexels-pixabay-261102.jpg" alt="" class="img-fluid big-round">
+            </div>
+        </div>
+
+        <div class="row mt-5 text-light">
+            <div class="col-12">
+                <h2>Rooms & Suites</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto assumenda itaque accusantium nostrum
+                    tenetur libero facilis alias autem omnis voluptate ullam ipsum voluptas sunt sit, veniam, maiores ea
+                    cum unde.
+                </p>
+            </div>
+
+            <div class="col-lg">
+                <figure>
+                    <img src="img/pexels-boonkong-boonpeng-442952-1134176.jpg" class="img-fluid big-round" alt="">
+                    <figcaption class="legenda-fotos bg-verde">
+                        <h4>DeLuxe Room</h4>
+                        <p>$120 / night</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-lg">
+                <figure>
+                    <img src="img/pexels-enginakyurt-1579253.jpg" class="img-fluid big-round" alt="">
+                    <figcaption class="legenda-fotos bg-verde">
+                        <h4>Superior Suíte</h4>
+                        <p>$180 / night</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-lg">
+                <figure>
+                    <img src="img/pexels-pixabay-261102.jpg" class="img-fluid big-round" alt="">
+                    <figcaption class="legenda-fotos bg-verde">
+                        <h4>Executive Room</h4>
+                        <p>$150 / night</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Inserir aqui linha para Exclusive Services -->
+
+
+        <!-- Inserir aqui linha para Guest Reviews -->
+
+
+        <!-- Linha do calendário e mapa -->
+        <div class="row text-light">
+            <div class="col-12">
+                <h2>Book Now</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, architecto aut? Quidem vel
+                    corporis natus hic aut aliquid commodi quaerat labore magnam error, dignissimos reiciendis! Animi,
+                    at? Ad, tempore eveniet?
+                </p>
+            </div>
+
+            <div class="col-md">
+                <p>Checkin</p>
+                <button class="btn btn-light rounded-pill ps-5 pe-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-calendar-heart-icon lucide-calendar-heart">
+                        <path d="M3 10h18V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7" />
+                        <path d="M8 2v4" />
+                        <path d="M16 2v4" />
+                        <path
+                            d="M21.29 14.7a2.43 2.43 0 0 0-2.65-.52c-.3.12-.57.3-.8.53l-.34.34-.35-.34a2.43 2.43 0 0 0-2.65-.53c-.3.12-.56.3-.79.53-.95.94-1 2.53.2 3.74L17.5 22l3.6-3.55c1.2-1.21 1.14-2.8.19-3.74Z" />
+                    </svg>
+                    16 julho 2025
+                </button>
+
+                <p>Checkout</p>
+                <button class="btn btn-light rounded-pill ps-5 pe-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-calendar-heart-icon lucide-calendar-heart">
+                        <path d="M3 10h18V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7" />
+                        <path d="M8 2v4" />
+                        <path d="M16 2v4" />
+                        <path
+                            d="M21.29 14.7a2.43 2.43 0 0 0-2.65-.52c-.3.12-.57.3-.8.53l-.34.34-.35-.34a2.43 2.43 0 0 0-2.65-.53c-.3.12-.56.3-.79.53-.95.94-1 2.53.2 3.74L17.5 22l3.6-3.55c1.2-1.21 1.14-2.8.19-3.74Z" />
+                    </svg>
+                    17 julho 2025
+                </button>
+            </div>
+
+            <div class="col-md">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.6594947300673!2d-45.56408642380295!3d-23.036271342513096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ccf91e696b7da7%3A0x531b7ec4bff84e66!2sSenac%20Taubat%C3%A9!5e0!3m2!1spt-BR!2sbr!4v1752676749433!5m2!1spt-BR!2sbr"
+                    width="100%" height="300" class="big-round" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+
+
+        <!-- Rodapé com fotrmulário -->
+        <footer class="row text-light bg-verde big-round">
+            <div class="col-md">
+                Endereços de contato
+            </div>
+            <div class="col-md">
+                Menu simples
+            </div>
+            <div class="col-md">
+                <!-- formulário de cadastro -->
+                <form action="processador.php" method="post">
+
+                </form>
+            </div>
+        </footer>
+
+
+
+        <!-- final do container -->
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
-    <!-- Js interno -->
+
+    <!-- Javascript interno -->
     <script>
 
     </script>
